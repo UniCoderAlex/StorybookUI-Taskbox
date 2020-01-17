@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Provider } from 'react-redux'
+import store from './lib/redux'
+import TaskList from './components/TaskList'
 import './App.css';
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+    <Provider store={store}>
+        <TaskList />
+    </Provider>
     </div>
   );
 }
